@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/ultis/category_ulti.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -69,6 +70,89 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: const EdgeInsets.only(right: 12.0),
                   child: Icon(Icons.map, color: Colors.black),
+                ),
+              ],
+            ),
+          ),
+
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/hot-deal.png',
+                          'Khuyến Mãi',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/cart.png',
+                          'Tiện Lợi',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/grocery.png',
+                          'Thực Phẩm',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/Pickup.png',
+                          'Tại Quầy',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/medicine_1.png',
+                          'Nhà Thuốc',
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/pho.png',
+                          'Phở',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/banh_mi.png',
+                          'Bánh Mì',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/fast_food.png',
+                          'Ăn Nhanh',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/com_tam.png',
+                          'Cơm Tấm',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/goi_cuon.png',
+                          'Gỏi Cuốn',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/vietnam.png',
+                          'Đồ Việt',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/thai.png',
+                          'Đồ Thái',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/korean.png',
+                          'Đồ Hàn',
+                        ),
+                        CategoryUtils.buildCategoryItem(
+                          'assets/icons/japan.png',
+                          'Đồ Nhật',
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
