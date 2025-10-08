@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
             pinned: true,
             title: Row(
               children: [
-                Icon(Icons.location_on, color: Colors.black),
+                Icon(Icons.location_on, color: Color.fromRGBO(34, 35, 46, 1)),
                 SizedBox(
                   width: 155,
                   child: Text(
@@ -28,22 +28,31 @@ class _HomePageState extends State<HomePage> {
                     maxLines: 1,
                     softWrap: false,
                     style: GoogleFonts.nunitoSans(
-                      color: Colors.black,
+                      color: Color.fromRGBO(34, 35, 46, 1),
                       fontWeight: FontWeight.w800,
                       fontSize: 15,
                     ),
                   ),
                 ),
-                Icon(Icons.keyboard_arrow_down, color: Colors.black),
+                Icon(
+                  Icons.keyboard_arrow_down,
+                  color: Color.fromRGBO(34, 35, 46, 1),
+                ),
                 Spacer(),
-                Icon(Icons.notifications_none, color: Colors.black),
+                Icon(
+                  Icons.notifications_none,
+                  color: Color.fromRGBO(34, 35, 46, 1),
+                ),
                 SizedBox(width: 16),
-                Icon(Icons.shopping_cart_outlined, color: Colors.black),
+                Icon(
+                  Icons.shopping_cart_outlined,
+                  color: Color.fromRGBO(34, 35, 46, 1),
+                ),
               ],
             ),
             toolbarHeight: 60,
             backgroundColor: Colors.white,
-            foregroundColor: Colors.black,
+            foregroundColor: Color.fromRGBO(34, 35, 46, 1),
           ),
           SliverToBoxAdapter(
             child: Row(
@@ -69,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 12.0),
-                  child: Icon(Icons.map, color: Colors.black),
+                  child: Icon(Icons.map, color: Color.fromRGBO(34, 35, 46, 1)),
                 ),
               ],
             ),
@@ -97,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                           'Thực Phẩm',
                         ),
                         CategoryUtils.buildCategoryItem(
-                          'assets/icons/Pickup.png',
+                          'assets/icons/pick_up.png',
                           'Tại Quầy',
                         ),
                         CategoryUtils.buildCategoryItem(
@@ -155,6 +164,38 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ],
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.only(left: 8.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Wrap(
+                  spacing: 3,
+                  children: [
+                    CategoryUtils.buildTag(
+                      'assets/flat_icons/discount.png',
+                      'Khuyến mãi',
+                    ),
+                    const SizedBox(width: 8),
+                    CategoryUtils.buildTag(
+                      'assets/flat_icons/location.png',
+                      'Gần Bạn',
+                    ),
+                    const SizedBox(width: 8),
+                    CategoryUtils.buildTag(
+                      'assets/flat_icons/star.png',
+                      'Đánh Giá Cao',
+                    ),
+                    const SizedBox(width: 8),
+                    CategoryUtils.buildTag(
+                      'assets/flat_icons/new.png',
+                      'Quán Mới',
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
         ],
