@@ -198,6 +198,34 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 12, top: 12),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Wrap(
+                  spacing: 15,
+                  children: [
+                    CategoryUtils.buildBanner(
+                      'assets/images/banner1.png',
+                      'Giảm 40% cho đơn đầu tiên',
+                      'Miễn phí giao hàng cho đơn từ 200.000đ Mã: NEW40',
+                    ),
+                    CategoryUtils.buildBanner(
+                      'assets/images/banner2.png',
+                      'Giảm 30% cho mọi đơn!',
+                      'Áp dụng 10h–14h, đơn từ 100.000đ Mã: LUNCH30',
+                    ),
+                    CategoryUtils.buildBanner(
+                      'assets/images/banner3.png',
+                      'Giảm thêm 10% khi đặt từ 3 món trở lên',
+                      'Áp dụng tại các cửa hàng tham gia Mã: MULTI10',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ),
       backgroundColor: Colors.white,
