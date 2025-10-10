@@ -226,6 +226,86 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20, left: 12, right: 16),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        'Gần Bạn Nhất',
+                        style: GoogleFonts.nunitoSans(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Spacer(),
+                      Image.asset(
+                        'assets/flat_icons/right_arrow.png',
+                        width: 15,
+                        height: 15,
+                      ),
+                    ],
+                  ),
+                  Padding(padding: EdgeInsets.only(top: 12.0)),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Wrap(
+                      spacing: 15,
+                      children: [
+                        CategoryUtils.buildBrandCard(
+                          'assets/images/brand1.jpg',
+                          'Starbucks',
+                          4.7,
+                          1,
+                          0.3,
+                          10,
+                          'Mua 1 tặng 1',
+                        ),
+                        CategoryUtils.buildBrandCard(
+                          'assets/images/brand2.jpg',
+                          'Jolibee',
+                          4.8,
+                          2,
+                          1.4,
+                          25,
+                          'Giảm 50%',
+                        ),
+                        CategoryUtils.buildBrandCard(
+                          'assets/images/brand3.jpg',
+                          'Texas Chicken',
+                          4.3,
+                          2,
+                          1.3,
+                          15,
+                          'FreeShip',
+                        ),
+                        CategoryUtils.buildBrandCard(
+                          'assets/images/brand4.jpg',
+                          'Bánh Mì Bà Hoa',
+                          4.9,
+                          3,
+                          2.3,
+                          10,
+                          'Giảm 20%',
+                        ),
+                        CategoryUtils.buildBrandCard(
+                          'assets/images/brand5.jpg',
+                          'Pizza Hut',
+                          4.7,
+                          2,
+                          0.6,
+                          9,
+                          'Mua 1 tặng 1',
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
       backgroundColor: Colors.white,
