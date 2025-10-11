@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/pages/subPages/homePage.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:food_delivery/pages/subPages/home_page.dart';
 import 'package:food_delivery/ultis/category_ulti.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,9 +14,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     HomeBody(),
-    Container(child: Text('Nhận Đơn')),
-    Container(child: Text('Tìm Kiếm')),
-    Container(child: Text('Tài Khoản')),
+    Center(child: Text('Nhận Đơn')),
+    Center(child: Text('Tìm Kiếm')),
+    Center(child: Text('Tài Khoản')),
   ];
   int _selectedIndex = 0;
 
@@ -63,6 +64,58 @@ class _HomePageState extends State<HomePage> {
           label: 'Tài Khoản',
         ),
       ],
+    );
+  }
+
+  Widget buildBanners() {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 8, top: 12),
+        child: FutureBuilder<List<dynamic>>(
+          future: rootBundle
+              .loadString('assets/data/banner.json')
+              .then((s) => json.decode(s) as List<dynamic>),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState != ConnectionState.done) {
+              return SizedBox(
+                height: 160,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  itemBuilder: (_, __) => SizedBox(width: 370, height: 146),
+                  separatorBuilder: (_, __) => const SizedBox(width: 12),
+                  itemCount: 3,
+                ),
+              );
+            }
+
+            if (!snapshot.hasData || snapshot.data!.isEmpty) {
+              return SizedBox.shrink();
+            }
+
+            final items = snapshot.data!;
+            return SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: items.map((raw) {
+                  final map = raw as Map<String, dynamic>;
+                  final imagePath = map['imagePath'] as String? ?? '';
+                  final mainLabel = map['mainLabel'] as String? ?? '';
+                  final subLabel = map['subLabel'] as String? ?? '';
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: CategoryUtils.buildBanner(
+                      imagePath,
+                      mainLabel,
+                      subLabel,
+                    ),
+                  );
+                }).toList(),
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 }

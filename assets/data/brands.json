@@ -1,0 +1,47 @@
+[
+  {
+    "image": "assets/images/brand1.jpg",
+    "name": "Starbucks",
+    "rating": 4.7,
+    "deliveryType": 1,
+    "distance": 0.3,
+    "minOrder": 10,
+    "tag": "Mua 1 tặng 1"
+  },
+  {
+    "image": "assets/images/brand2.jpg",
+    "name": "Jolibee",
+    "rating": 4.8,
+    "deliveryType": 2,
+    "distance": 1.4,
+    "minOrder": 25,
+    "tag": "Giảm 50%"
+  },
+  {
+    "image": "assets/images/brand3.jpg",
+    "name": "Texas Chicken",
+    "rating": 4.3,
+    "deliveryType": 2,
+    "distance": 1.3,
+    "minOrder": 15,
+    "tag": "FreeShip"
+  },
+  {
+    "image": "assets/images/brand4.jpg",
+    "name": "Bánh Mì Bà Hoa",
+    "rating": 4.9,
+    "deliveryType": 3,
+    "distance": 2.3,
+    "minOrder": 10,
+    "tag": "Giảm 20%"
+  },
+  {
+    "image": "assets/images/brand5.jpg",
+    "name": "Pizza Hut",
+    "rating": 4.7,
+    "deliveryType": 2,
+    "distance": 0.6,
+    "minOrder": 9,
+    "tag": "Mua 1 tặng 1"
+  }
+]

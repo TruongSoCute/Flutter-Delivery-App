@@ -1,0 +1,17 @@
+[
+  {
+    "imagePath": "assets/images/banner1.png",
+    "mainLabel": "Giảm 40% cho đơn đầu tiên",
+    "subLabel": "Miễn phí giao hàng cho đơn từ 200.000đ Mã: NEW40"
+  },
+  {
+    "imagePath": "assets/images/banner2.png",
+    "mainLabel": "Giảm 30% cho mọi đơn!",
+    "subLabel": "Áp dụng 10h–14h, đơn từ 100.000đ Mã: LUNCH30"
+  },
+  {
+    "imagePath": "assets/images/banner3.png",
+    "mainLabel": "Giảm thêm 10% khi đặt từ 3 món trở lên",
+    "subLabel": "Áp dụng tại các cửa hàng tham gia Mã: MULTI10"
+  }
+]

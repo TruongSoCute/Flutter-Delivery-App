@@ -201,11 +201,7 @@ class CategoryUtils {
         color: Colors.grey.shade100,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
-            blurRadius: 2,
-            offset: const Offset(0, 1),
-          ),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.1), blurRadius: 2),
         ],
       ),
       child: Row(
@@ -239,7 +235,7 @@ class CategoryUtils {
               height: 60,
               padding: const EdgeInsets.all(4),
               decoration: BoxDecoration(
-                color: Colors.grey.shade200,
+                color: Colors.grey.shade100.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(15),
               ),
               alignment: Alignment.center,

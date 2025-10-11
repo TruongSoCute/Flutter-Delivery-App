@@ -1,0 +1,6 @@
+[
+  { "icon": "assets/flat_icons/discount.png", "label": "Khuyến mãi" },
+  { "icon": "assets/flat_icons/location.png", "label": "Gần Bạn" },
+  { "icon": "assets/flat_icons/star.png", "label": "Đánh Giá Cao" },
+  { "icon": "assets/flat_icons/new.png", "label": "Quán Mới" }
+]

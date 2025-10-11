@@ -1,0 +1,16 @@
+[
+  { "icon": "assets/icons/hot-deal.png", "label": "Khuyến Mãi" },
+  { "icon": "assets/icons/cart.png", "label": "Tiện Lợi" },
+  { "icon": "assets/icons/grocery.png", "label": "Thực Phẩm" },
+  { "icon": "assets/icons/pick_up.png", "label": "Tại Quầy" },
+  { "icon": "assets/icons/medicine_1.png", "label": "Nhà Thuốc" },
+  { "icon": "assets/icons/pho.png", "label": "Phở" },
+  { "icon": "assets/icons/banh_mi.png", "label": "Bánh Mì" },
+  { "icon": "assets/icons/fast_food.png", "label": "Ăn Nhanh" },
+  { "icon": "assets/icons/com_tam.png", "label": "Cơm Tấm" },
+  { "icon": "assets/icons/goi_cuon.png", "label": "Gỏi Cuốn" },
+  { "icon": "assets/icons/vietnam.png", "label": "Đồ Việt" },
+  { "icon": "assets/icons/thai.png", "label": "Đồ Thái" },
+  { "icon": "assets/icons/korean.png", "label": "Đồ Hàn" },
+  { "icon": "assets/icons/japan.png", "label": "Đồ Nhật" }
+]
